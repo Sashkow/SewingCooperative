@@ -1,0 +1,1 @@
+web: gunicorn sewing_cooperative.wsgi --log-file -

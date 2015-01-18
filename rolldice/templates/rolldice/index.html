@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roll Dice</title>
+</head>
+<body>
+	<form action="{% url 'roll-dice' %}" method="post">
+		{% csrf_token %}
+		<div>{{dice}}</div>
+		<input name="rolldice" type="submit" value="Roll Dice" />
+	</form>	
+</body>
+</html>
