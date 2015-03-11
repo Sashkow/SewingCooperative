@@ -7,13 +7,25 @@
 	<script src="{% static "rolldice/js/jquery-ui.js" %}" type="text/javascript"></script>
 	<script src="{% static "rolldice/js/jquery.js" %}" type="text/javascript"></script>
 	<script src="{% static "rolldice/js/ajax.js" %}" type="text/javascript"></script>
+	
+    
+    
 </head>
 <body>
-	<!-- <form action=""> -->
-		<!-- {% csrf_token %} -->
+	<form action="{% url 'roll-dice' %}">
+		{% csrf_token %}
 		<input id="rolldice_button" type="submit" value="Roll Dice" />
 		<div id="dice_value"></div>
 		<img id="location_img" src="">
-	<!-- </form>	 -->
+	</form>	
+
+	<!-- <h1>Leave a Suggestion Here</h1>
+        <div class="message"></div>
+        <div>
+            <form action="" method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit Feedback" />
+            </form>
+     -->     
 </body>
 </html>

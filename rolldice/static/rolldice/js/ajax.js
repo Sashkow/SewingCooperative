@@ -14,13 +14,12 @@ $(document).ready(function(){
 
 });
 
+$('#form').submit(function(e){
+    $.post('/rolldice/advert', $(this).serialize(), function(data){
+    	
+       $('.message').html(data.message);
+       $('id_dice1').dice_value(data+1)
+    });
+    e.preventDefault();
+});
 
-			// $(".img_table_cell a img").each(function(i){
-			// 	// refresh all images
-			// 	d = new Date();
-			// 	var imgsrc = $(this).attr("src");
-			// 	console.log(imgsrc);
-			// 	if (imgsrc.indexOf("?")!=-1)
-			// 		imgsrc=imgsrc.substr(0,imgsrc.indexOf("?"));
-			// 	console.log(imgsrc);
-		 //        $(this).attr("src", imgsrc+"?"+d.getTime());

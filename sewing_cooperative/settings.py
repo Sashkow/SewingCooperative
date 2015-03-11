@@ -36,8 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'rolldice'
+    # 'django_socketio',
+    
+    'rolldice',
+    'south'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,11 +47,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
 
+    
+)
 ROOT_URLCONF = 'sewing_cooperative.urls'
 
 WSGI_APPLICATION = 'sewing_cooperative.wsgi.application'
@@ -67,6 +69,10 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
+
+FIXTURE_DIRS = (
+    os.path.join(BASE_DIR, 'rolldice/fixtures'),
+    )
 
 LANGUAGE_CODE = 'en-us'
 

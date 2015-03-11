@@ -8,5 +8,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rolldice/', include('rolldice.urls')),
+    # url("", include('django_socketio.urls')),
 )
 

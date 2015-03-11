@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Advert(models.Model):
+	dice1 = models.IntegerField()
+	dice2 = models.IntegerField()
